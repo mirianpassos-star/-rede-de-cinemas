@@ -58,6 +58,11 @@
 
 - RN08 - Fechamento de Relatório: O total de público por filme só deve ser contabilizado após o horário de término previsto da sessão.
 
+
+
+<img width="447" height="772" alt="image" src="https://github.com/user-attachments/assets/9d41e1c1-d7d6-4b02-8eed-d85f727db4c8" />
+
+
 - RN09 - Integridade de Dados: Um filme não pode ser removido do sistema enquanto houver sessões (ativas ou passadas) vinculadas a ele.
 
 - RN10 - Unicidade de Exibição: Um mesmo filme pode ser exibido em salas diferentes simultaneamente, respeitando a disponibilidade de cada sala.
