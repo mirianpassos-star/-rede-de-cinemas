@@ -19,6 +19,7 @@
 -   RF09 - Relatório de Ocupação: O sistema deve calcular a porcentagem de ocupação das salas com base no público registrado e na capacidade total.
 
 - RF10 - Filtro por Gênero: O sistema deve permitir a busca e filtragem de sessões baseadas no gênero do filme (Ação, Drama, Terror, etc.).
+  
 ### Requisitos Não Funcionais (RNF)
 - RNF01 - Persistência: O sistema deve utilizar o banco de dados SQLite para garantir a persistência dos dados de forma local e leve.
 
@@ -39,3 +40,24 @@
 - RNF09 - Padronização: O código deve seguir as diretrizes de estilo da linguagem (PEP 8 para Python) para facilitar a manutenção.
 
 - RNF10 - Segurança: O sistema deve exigir autenticação para acesso às funcionalidades de gerenciamento e relatórios financeiros.
+
+### Regras de Negócio (RN)
+- RN01 - Choque de Horários: Uma sala não pode hospedar duas sessões simultâneas; o sistema deve validar conflitos no cadastro.
+
+- RN02 - Intervalo de Limpeza: Deve haver um intervalo obrigatório de no mínimo 20 minutos entre o término de uma sessão e o início da próxima na mesma sala.
+
+- RN03 - Limite de Capacidade: O registro de público não pode exceder a capacidade total de assentos definida no cadastro da sala vinculada à sessão.
+
+- RN04 - Cálculo de Término: O horário de término de uma sessão deve ser calculado automaticamente somando a duração do filme ao horário de início.
+
+- RN05 - Cancelamento de Sessão: Uma sessão só pode ser excluída do sistema se não houver registro de público associado a ela.
+
+- RN06 - Vínculo de Cinema: Cada sala deve estar obrigatoriamente vinculada a uma única unidade de cinema cadastrada na rede.
+
+- RN07 - Sessões Retroativas: Não é permitido o cadastro de sessões com data e hora anteriores ao momento atual do sistema.
+
+- RN08 - Fechamento de Relatório: O total de público por filme só deve ser contabilizado após o horário de término previsto da sessão.
+
+- RN09 - Integridade de Dados: Um filme não pode ser removido do sistema enquanto houver sessões (ativas ou passadas) vinculadas a ele.
+
+- RN10 - Unicidade de Exibição: Um mesmo filme pode ser exibido em salas diferentes simultaneamente, respeitando a disponibilidade de cada sala.
