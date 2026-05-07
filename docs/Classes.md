@@ -1,5 +1,4 @@
 
-# Diagrama de Casos de Uso (Visão Geral)
 ### Cinema
 
 - RF05
