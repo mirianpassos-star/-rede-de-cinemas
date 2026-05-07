@@ -92,8 +92,8 @@
 - idRegistro
 
 - dataLancamento
-
-- quantidadeEspectadores
+  
+-  quantidadeEspectadores
 
 - registrarEntrada(qtd: int)
 
